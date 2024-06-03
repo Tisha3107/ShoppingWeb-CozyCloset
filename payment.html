@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <title>Cart Checkout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/payment.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="callout">
+        <div class="text-left">
+            <h1>CHECKOUT</h1>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="products-container">
+            <div class="step-form-cart">
+                <div class="form">
+                    <div class="step-form email-add" id="add-email">
+                        <div class="row">
+                            <div class="large-1 columns">
+                                <span class="check" style="display: none;">+</span>
+                            </div>
+                            <div class="large-7 columns">
+                                <h2 class="heading">ADD EMAIL ADDRESS</h2>
+                                <input type="text" value="" class="emailAdd" id="emailaddress" name="emailaddress"
+                                    placeholder="Enter your email address..." onkeypress="checkEmail(this.value)">
+                                <span class="error-msg">Please enter valid email address</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="step-form billing" id="add-billing">
+                        <div class="row">
+                            <div class="large-1 columns">
+
+                            </div>
+                            <div class="large-7 columns">
+                                <h2 class="heading">BILLING INFORMATION</h2>
+                                <label for="name"><b>BILLING NAME</b></label>
+                                <input type="text" name="billingName" id="billName" placeholder="Billing name"
+                                    onblur="isNotEmpty('#billName')">
+                                <span class="error-bill-name">Name cannot be blank</span>
+                                <label for="add1"><b>ADDRESS (lINE 1)</b></label>
+                                <input type="text" name="add1" id="add1" value="" placeholder="Address"
+                                    onblur="isNotEmpty('#add1')">
+                                <span class="error-bill-add1">Enter address</span>
+                                <label for="add2"><b>ADDRESS (lINE 2)</b></label>
+                                <input type="text" name="add2" id="add2" value="" placeholder="Address">
+                                <label for="state"><b>STATE</b></label>
+                                <input type="text" id="cust-state" name="cust-state" value=""
+                                    onblur="isNotEmpty('#cust-state')">
+                                <span class="error-cust-state">State cannot be blank</span>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <label for="city"><b>CITY</b></label>
+                                        <input type="text" id="cust-city" name="cust-city" value=""
+                                            onblur="isNotEmpty('#cust-city')">
+                                        <span class="error-cust-city">City cannot be blank</span>
+                                    </div>
+                                    <div class="large-6 columns">
+                                        <label for="zip-code"><b>ZIPCODE</b></label>
+                                        <input type="text" name="zip-code" id="zipCode" value=""
+                                            onblur="isNotEmpty('#zipCode')">
+                                        <span class="error-zipcode">Zipcode cannot be blank</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="step-form payment" id="add-payment">
+                        <div class="row">
+                            <div class="large-1 columns">
+
+                            </div>
+                            <div class="large-7 columns">
+                                <h2 class="heading">PAYMENT METHOD</h2>
+                                <label for="name"><b>NAME ON CARD</b></label>
+                                <input type="text" name="fullName" placeholder="Full name as it appears on card"
+                                    oninput="CC_name_format()" id="ccName">
+                                <span class="error-cc-name">Name cannot be blank</span>
+                                <label for="cardNo"><b>CARD NUMBER</b></label>
+                                <input type="text" name="cardNo" id="ccNo" value="" placeholder="xxxx xxxx xxxx xxxx"
+                                    onkeypress="validateCCnumber()">
+                                <span class="error-cc-no">Please enter valid credit card number</span>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <label for="expDate"><b>EXPIRY DATE</b></label>
+                                        <input type="text" id="ccDate" name="date" maxlength="7" placeholder="MM / YYYY"
+                                            value="" oninput="checkDateFormat(value)">
+                                        <span class="error-cc-date">Please enter a valid date in MM/YY format</span>
+                                    </div>
+                                    <div class="large-6 columns">
+                                        <label for="ccv"><b>CCV</b></label>
+                                        <input type="text" name="ccv" id="cvvNo" placeholder="..." maxlength="4"
+                                            value="" oninput="checkCvvFormat(value)">
+                                        <span class="error-cvv">Please enter valid CVV number</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="step-form payment-edit" id="edit-payment">
+                        <div class="row">
+                            <div class="large-1 columns">
+                                <span class="no-check">&#x2714;</span>
+                            </div>
+                            <div class="large-7 columns">
+                                <div>
+                                    <h2 class="heading">Payment method</h2>
+                                    <a href="javascript:void(0)" class="edit-btn" id="edit-payment-sect">Edit</a>
+                                </div>
+                                <label for="name"><b>name on card</b></label>
+                                <input type="text" name="fullName" placeholder="Full name as it appears on card"
+                                    id="set_ccName" disabled>
+                                <span class="error-cc-name">Name cannot be blank</span>
+                                <label for="cardNo"><b>card number</b></label>
+                                <input type="text" name="cardNo" id="set_ccNo" value=""
+                                    placeholder="xxxx xxxx xxxx xxxx" disabled>
+                                <span class="error-cc-no">Please enter valid credit card number</span>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <label for="expDate"><b>exp. date</b></label>
+                                        <input type="text" id="set_ccDate" name="date" maxlength="7"
+                                            placeholder="MM / YYYY" value="" disabled>
+                                        <span class="error-cc-date">Please enter a valid date in MM/YY format</span>
+                                    </div>
+                                    <div class="large-6 columns">
+                                        <label for="ccv"><b>ccv</b></label>
+                                        <input type="text" name="ccv" id="set_cvvNo" placeholder="..." maxlength="4"
+                                            value="" disabled>
+                                        <span class="error-cvv">Please enter valid CVV number</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="large-4 columns"></div>
+                        </div>
+                    </div>
+                    <div class="step-form review-edit">
+
+                        <div class="row">
+                            <div class="large-8 promo-container">
+                                <h3 class="promo-label"><a href="javascript:void(0)" id="getPromo"
+                                        onclick="hasPromoCode()">DO YOU HAVE A PROMO CODE?</a></h3>
+                                <div class="promo-apply" style="display:none;">
+                                    <div class="promo-appl-field">
+                                        <input type="text" name="promoApply" id="promoApply" oninput="promoCodeApply()"
+                                            placeholder="Enter your promo code...">
+                                    </div>
+                                    <a href="javascript:void(0)" class="promo-appl-btn disabled">APPLY CODE</a>
+                                    <p><a href="javascript:void(0)" id="showPromo">How do I get one of these?<span
+                                                class="tooltiptext tooltip-bottom">Tooltip text here</span></a></p>
+                                </div>
+                                <div class="promo-update" id="promoUpdate" style="display:none;">
+                                    <h3 class="disc-label"><a href="#">If you add to cart now you will save $50!</a>
+                                    </h3>
+                                    <input type="text" name="promoUpdate" value="" id="promoCode_value" disabled>
+                                    <a href="javascript:void(0)" class="edit-btn" onclick="promoCodeApply()">Edit</a>
+                                    <a href="javascript:void(0)" class="remove-btn" onclick="hasPromoCode()">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="place-order-footer">
+                <div class="place-order-details">
+                    <a href="success.html" class="order-btn" id="place-order">PLACE YOUR ORDER &nbsp; &nbsp; &#62;</a>
+                    <div class="place-order-quote">
+                        <p class="ord-total">Order total: <span>$1,500.00</span></p>
+                        <p class="disclaimer">By placing your order, you agree to Mercer's <a href="#">privacy
+                                notice</a> and <a href="#">conditions of use.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product right components -->
+        <div class="product-sidebar">
+            <!-- Proceed to checkout components-->
+            <div class="products-left-container">
+                <div class="place-order">
+                    <a href="success.html" class="order-btn">PLACE YOUR ORDER &nbsp; &nbsp; &#62;</a>
+                    <p class="disclaimer">By placing your order, you agree to Mercer's <a href="#">privacy notice</a>
+                        and <a href="#">conditions of use.</a></p>
+
+                </div>
+                <div class="order-summary">
+                    <h3>ORDER SUMMARY</h3>
+                    <div class="row">
+                        <div class="order-items">Items</div>
+                        <div class="order-price">$1,500.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="order-items">Sales Tax:*</div>
+                        <div class="order-price">$00.00</div>
+                    </div>
+                </div>
+                <div class="order-total">
+                    order total: &nbsp;<span> $1,500.00</span>
+                </div>
+            </div>
+            <!-- Proceed to checkout components ends-->
+        </div>
+        <!-- Product right components ends-->
+    </div>
+
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="scripts/payment.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,729 @@
+/* Common CSS */
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.grid-container{padding: 1.5em;background: #f8f8f8;}
+.pxl{padding-left: 1em;padding-right: 1em;}
+.pyl{padding-top: 1em;padding-bottom: 1em;}
+.vlt{vertical-align: top;}
+ .inputError{border: 1px solid red !important}; 
+
+
+/*Custom CSS Grid*/
+[class*="col-"] {float: left;}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+/*Custom CSS Grid ends*/
+
+/* Banner CSS */
+.callout{
+    position: relative;
+    padding:2em;
+    background-color: black;
+    border: 1px solid rgba(10,10,10,.25);
+    margin: 0 0 1em 0;
+}
+.callout h1{
+    font-size:38px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+/* Banner CSS ends*/
+
+/*Product Description Component*/
+.products-container{
+    width:64%;
+    float: left;
+    box-sizing: border-box;
+}
+.step-form-cart{
+    background: #fff;
+    border-radius: 2px;
+    overflow: visible;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
+    /* padding: 20px 0; */
+    /* margin-bottom: 20px; */
+}
+.step-form{
+    padding: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.step-form:last-child{
+    border:none;
+    padding-right: 0;
+}
+.step-form span.no-check{
+    position: relative;
+    top: 12px;
+    right: 8px;
+    background: #0d47a1;
+    border-radius: 50%;
+    padding: 15px 18px;
+    font-weight: 600;
+    color: #fff;
+}
+.step-form h2.heading{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #313131;
+}
+
+.step-form input:not([type=checkbox]){
+    height: 30px;
+    margin-top: 10px;
+    border: 1px solid orange;
+    padding: 20px 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #313131;
+}
+
+.step-form.email-add{transition: 0.2s;}
+
+.step-form.email-add a.btn-active, .step-form.email-add a.btn-disabled{
+    margin-top: 53px;
+}
+.step-form.email-add .error-msg{
+    display: none;
+    font-size: 12px;
+    color:red;
+    padding-top: 5px;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;    
+}
+.error-cc-no, .error-cc-name, .error-cc-date, .error-cvv, .error-bill-name, .error-bill-add1, .error-bill-add2, .error-cust-state, .error-cust-city, .error-zipcode{
+    display: none;
+    font-size: 12px;
+    color:red;
+    padding-top: 5px;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;    
+}
+.step-form a.btn-active{
+    max-width: 100px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    background: #0d47a1;
+    text-transform: capitalize;
+    border:1px solid #0d47a1;
+    transition: 0.2s;
+    padding: 9px 7px;
+    display: block;
+    font-size: 15px;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+.step-form a.btn-active:hover{
+    background: #fff;
+    border:1px solid #0d47a1;
+    color: #0d47a1;
+}
+
+/* Email & billing Section edit  */
+.step-form.email-edit, .step-form.billing-edit{display: none; transition: 0.2s;background: #e3f0f5;}
+
+.step-form.email-edit .no-check, .step-form.billing-edit .no-check{
+    position: relative;
+    top: 12px;
+    right: 8px;
+    background: #a5d6a7;
+    border-radius: 50%;
+    padding: 15px 18px;
+    font-weight: 600;
+    color: #282b28;
+}
+.step-form.email-edit h2.heading, .step-form.step-form.billing-edit h2.heading{display: inline-block}
+
+.step-form.email-edit a.edit-btn, .step-form.step-form.billing-edit a.edit-btn{
+    font-size: 15px;
+    margin-left: 15px;
+    color: #3870c7;
+    font-weight: 600;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+
+.step-form.email-edit .user-email{
+    display: block;
+    font-size: 13px;
+    padding: 10px;
+    height:40px;
+    border: 1px solid #ebebeb;
+    background: #f8f8f8;
+    font-weight: 600;
+    color: #5a5959;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+.step-form.payment label, .step-form.payment-edit label, .step-form.billing label, .step-form.billing-edit label{
+    display: inline-block;
+    text-transform: uppercase;
+    color: #002c77;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+
+.step-form.payment label:last-child, .step-form.payment-edit label:last-child{
+    vertical-align: bottom;
+    display: inline-block;
+    text-transform: capitalize;
+    color: #636262;
+    font-size: 14px;
+    letter-spacing: normal;
+    padding-left: 10px;
+}
+
+.step-form a.btn-disabled{
+    max-width: 100px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    background: #0d0808;
+    text-transform: capitalize;
+    text-decoration: none;
+    border:1px solid #8f8f8f;
+    transition: 0.2s;
+    padding: 9px 7px;
+    display: block;
+    font-size: 15px;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+
+.step-form.payment a.btn-disabled, .step-form.payment a.btn-active{
+    position: relative;
+    top: 257px;
+}
+.step-form.billing a.btn-disabled, .step-form.billing a.btn-active{
+    position: relative;
+    top: 427px;
+}
+.save-card-box{
+    border: 1px solid #e5e5e5;
+    background: #f8f8f8;
+    padding: 10px;
+    margin-top: 43px;
+    transition: 0.2s;
+}
+.save-card-box input[type=checkbox] {
+    padding-left:5px;
+    padding-right:5px;
+    border-radius:4px;
+    -webkit-appearance:button;
+    border: double 2px #e1e1e1;
+    background-color:#e0e0e0;
+    color:#FFF;
+    white-space: nowrap;
+    overflow:hidden;
+    width:20px;
+    height:20px;
+    margin: 0 5px 0 0;
+}
+
+.save-card-box input[type=checkbox]:checked {
+    background-color:#00acc1;
+}
+
+/* payment Section edit  */
+.step-form.payment-edit{
+    display: none; 
+    transition: 0.2s;
+    /* background: #e3f0f5; */
+}
+
+.step-form.payment-edit .no-check{
+    position: relative;
+    top: 12px;
+    right: 8px;
+    background: #a5d6a7;
+    border-radius: 50%;
+    padding: 15px 18px;
+    font-weight: 600;
+    color: #282b28;
+}
+
+.step-form.payment-edit h2.heading{display: inline-block}
+
+.step-form.payment-edit a.edit-btn{
+    font-size: 15px;
+    margin-left: 15px;
+    color: #3870c7;
+    font-weight: 600;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+
+.step-form.payment-edit input[type='text']{
+    display: block;
+    font-size: 13px;
+    padding: 10px;
+    height:40px;
+    border: 1px solid #ebebeb;
+    background: #f8f8f8;
+    font-weight: 600;
+    color: #5a5959;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+
+.step-form.payment-edit .save-card-box{
+    padding: 9px 10px;
+    margin-top: 42px;
+}
+
+.review-edit .review-product{
+    display: inline-block;
+    max-width: 200px;
+    padding: 20px;
+    border: 1px solid orange;
+    margin-right: 20px;
+}
+
+.review-product-scroller{
+    overflow-y: hidden;
+    height: 50%;
+    overflow-x: auto;
+    width: 670px;
+    white-space: nowrap;
+}
+.review-edit .review-product h2{
+    font-size: 13px;
+    margin: 5px 0;
+    line-height: 1.4em;
+    color: #2160a7;
+    font-weight: 600;
+}
+.review-edit .review-product .prod-price{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.review-edit .review-product a{
+    font-size: 12px;
+    font-weight: 600;
+    color: #8e8b8b;
+}
+
+/* Promo code css */
+.promo-container{
+    margin: 20px 0 0 60px;
+}
+h3.promo-label a#getPromo{
+	color: #1759a3;
+    font-size: 18px;
+    padding-left:20px;
+    position: relative;
+    top: 15px;
+}
+.promo-appl-field {
+    display:inline-block;
+    margin-right: 10px;
+}
+.promo-apply{
+	margin-left: 20px;
+}
+.promo-apply input{
+    height: 30px;
+	border: 1px solid orange;
+    font-size: 15px;
+    padding-left: 5px;
+}
+.promo-apply p{
+	color: #4277b3;
+	font-size: 15px;
+    line-height: 2;
+    padding-left: 10PX;
+}
+.promo-apply p .tooltiptext {
+    visibility: hidden;
+    position: relative;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 7px;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+a#showPromo:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip-bottom {
+    top: 29px;
+    right: 87px;
+    margin-left: -60px;
+}  
+.tooltip-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+a.promo-appl-btn.disabled{
+	width: 100px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    background: #8f8f8f;
+    text-transform: capitalize;
+    border: 1px solid #8f8f8f;
+    transition: 0.2s;
+    padding: 9px 7px;
+    display: inline-block;
+    font-size: 15px;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+a.promo-appl-btn.active{
+    width: 100px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    background: #0d47a1;
+    text-transform: capitalize;
+    border: 1px solid #0d47a1;
+    transition: 0.2s;
+    padding: 9px 7px;
+    display: inline-block;
+    font-size: 15px;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+a.promo-appl-btn.active:hover{
+    background: #fff;
+    border: 1px solid #0d47a1;
+    color: #0d47a1;
+}
+
+a.promo-appl-btn:hover{color:#fff;}
+
+.promo-update{
+	margin-left: 20px;
+}
+.promo-update input[name="promoUpdate"]{
+    height: 30px;
+    margin-top: 10px;
+    border: 1px solid orange;
+    padding: 20px 10px;
+    width: 50%;
+    font-size: 14px;
+    color: #313131;
+ 	
+}
+.promo-update .edit-btn{
+    color: #1759a3;
+    border-bottom: 1px solid #afadad;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.promo-update .remove-btn{
+	border-bottom: 1px solid #afadad;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.promo-update .disc-label{
+    color: #1759a3;
+    font-size: 18px;
+}
+
+/* Promo code css ends */
+
+/* place your order css starts */
+
+.place-order-footer {
+    background: #fff;
+    padding: 20px;
+    /* font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif; */
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.place-order-details .order-btn{
+    float: left;
+    color: #eaeaea;
+    background: #0a0808;
+    border: 1px solid #8f8f8f;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 10px;
+    width:200px;
+    border-radius: 3px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+
+.place-order-details .order-btn.active{
+    background: #ffb300;
+    border-color: #ffb300;
+    color: #423f3f;
+}
+
+.place-order-details .order-btn:hover{
+    border:1px solid #0d47a1;
+    color:#0d47a1;
+    background: #fff;
+}
+
+.place-order-details .place-order-quote{float: right;}
+
+.place-order-details .place-order-quote p{
+    font-size: 15px;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+.place-order-quote p.ord-total{
+    font-size: 16px;
+    font-weight: 600;
+    color: #525050;
+}
+.place-order-quote p.ord-total span{ color:#2160a7;}
+
+.place-order-quote p.disclaimer a{
+    color: #88b1f1;
+    text-decoration: none;
+}
+/* place your order css ends */
+
+@media (max-width: 768px){
+    .products-container{width: 100%;}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1300px){
+    .place-order-details .order-btn{
+        float: none;
+        display: block;
+        margin: 0 auto 2% auto; 
+    }
+}
+
+
+/* Proudct description component end here */
+
+
+/* Recently viewed items  */
+
+.recent-items-container{
+    /* padding: 0 20px 20px 20px; */
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
+    border-radius: 3px;
+    margin: 30px 0 20px 0;
+}
+.recent-item-header{
+    padding: 0 20px;
+    border-bottom: 1px solid #ecf0f1;
+}
+.recent-item-header h3{
+    display: inline-block;
+    font-size: 20px;
+    color: #3a3939;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif; 
+}
+.recent-item-header p{
+    float: right;
+}
+
+.recent-item-header p span{
+    font-size: 13px;
+    color: #4c4c4c;
+    margin-top: 13px;
+    margin-right: 10px;
+    display: inline-block;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif; 
+}
+
+.recent-item-header p a{
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #949494;
+    padding: 5px 8px;
+    border-radius: 2px;
+}
+
+.recent-items-content{
+    padding: 20px;
+}
+
+.recent-items-block{
+    display: inline-block;
+    padding-right: 30px;
+    max-width: 163px;
+}
+
+.recent-items-block img{
+    width:137px;
+    height: auto;
+    box-shadow: 5px 5px 5px #666;
+    -moz-box-shadow: 5px 5px 5px #666;
+    -webkit-box-shadow: 5px 5px 5px rgba(102, 102, 102, 0.7);
+}
+
+.recent-items-block h5{
+    color: #1759a3;
+    margin: 20px 10px 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.recent-items-block p{
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 10px 6px 0;
+    color: #4c4b4b;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif; 
+}
+
+.recent-items-block a{
+    display: inline-block;
+    padding: 5px 30px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    background-color: #11893e;
+    border-radius: 3px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    border: 1px solid #11893e;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif; 
+}
+
+.recent-items-block a:hover{
+    background: #fff;
+    color: #11893e;
+    border: 1px solid #11893e;
+}
+/* Recently viewed items ends here */
+/* Product left (Prodcut Des. + recently viewed )component starts */
+
+
+/* Product right sidebar component starts */
+.product-sidebar{
+    width:32%;
+    float: right;
+}
+
+/* Place you order starts */
+
+.products-left-container{
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
+    margin-bottom: 30px;
+}
+
+.place-order{
+    padding: 20px 20px 0 20px;
+}
+
+.place-order a.order-btn{
+    display: block;
+    color: #eaeaea;
+    background: #8f8f8f;
+    border:1px solid #8f8f8f;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 10px;
+    border-radius: 3px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif; 
+}
+.place-order a.order-btn.active{
+    background: #ffb300;
+    border-color: #ffb300;
+    color: #423f3f;
+}
+.place-order a.order-btn:hover{
+    border:1px solid #0d47a1;
+    color:#0d47a1;
+    background: #fff;
+}
+
+.place-order p.disclaimer{
+    color: #676464;
+    line-height: 1.8em;
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif; 
+}
+.place-order p.disclaimer a{
+    color: #88b1f1;
+    text-decoration: none;
+}
+
+.order-summary{
+    padding: 20px 20px 0 20px;
+    border-top: 1px solid #eaeaea;
+}
+
+.order-summary h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #313131;
+    margin: 0;
+    padding-bottom: 15px;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+.order-summary .order-items, .order-summary .order-price{
+    display: inline-block;
+    font-size: 16px;
+    color: #313131;
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin: 0;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+
+.order-summary .order-price{
+    float: right;
+}
+
+.order-total{
+    padding: 20px;
+    color:#fff;
+    background: #1759a3;
+    border: 1px solid #1759a3;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
+    font-family: ProximaNovaSemiBold, ProximaNovaSemiBold_T, ProximaNovaSemiBold_C, Arial, sans-serif, Arial, sans-serif;
+}
+
+
+@media (max-width: 768px){
+    .product-sidebar {width:100%;}
+}
+/* Product right sidebar component ends */
+
+
+.invalid{border: 1px solid red;}

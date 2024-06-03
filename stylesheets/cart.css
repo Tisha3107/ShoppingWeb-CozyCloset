@@ -1,0 +1,330 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+#header{
+	height:92px; 
+	border-bottom:1px solid #eee;
+    margin-left: 20px;
+    position: relative;
+    
+}
+#header ul{padding:33px 0 0 45px;}
+#header li{
+	list-style:none;
+	float:left;
+	margin-right:50px;	
+    margin-top: 30px;
+}
+#header li a{
+	font-weight:700;
+	color:#333;
+    font-family: 'Franklin Gothic Medium';
+	font-size:22px;	
+	text-decoration:none;
+	text-transform:uppercase;
+	letter-spacing:1px;
+    font-weight: bold;
+    position: st;
+}
+#headerli a:hover{
+	color:#000;
+	cursor:pointer;
+    
+}
+
+#header :hover{ 
+    color: red;
+}
+
+.logo{
+    float: right;
+    margin-right: 40px;
+    margin-top: -30px;
+    font-size: 37px;
+    font-weight: bold;
+    font-family:Cambria;
+    position: relative;
+
+}
+span{
+    font-size: 50px;
+    color: brown;
+}
+
+.container{
+	background-color: rgb(241, 233, 233);
+	height: 900px;
+	width: 76%;
+	margin-left: 350px;
+	position: absolute;
+    border-radius: 190px;
+}
+.btn{
+    height: 90px;
+	width: 300px;
+	margin-left: 870px;
+	margin-top: 290px;
+	font-size: 20px;
+	background-color: rgb(27, 26, 26);
+	color: white;
+	
+}
+.btn:hover{
+	background-color: green;
+	color: white;
+	height: 95px;
+	transition: 0.5s;
+}
+
+.card1{
+	background-color: rgb(241, 233, 233);
+	height: 850px;
+	width: 600px;
+    margin-left: 280px;
+	position: absolute;
+    margin-top: 20px;
+}
+.card1 .fa-img{
+	margin-top: 20px;
+	margin-left: 22px;
+}
+.card1 .p-4{
+	color: rgb(58, 50, 49);
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Cochin;
+	margin-left: 200px;
+    margin-top:-70px;
+}
+.card1 .amount{
+	font-size: 28px;
+	margin-left: 170px;
+	font-weight: bold;
+    margin-top: -100px;
+    margin-left: 200px;
+}
+.container-3 .size{
+	font-size: 22px;
+	margin-left: 20px;
+}
+
+.card2{
+	background-color: rgb(241, 233, 233);
+	height: 350px;
+	width: 400px;
+	position: absolute;
+    margin-top: 250px;
+	margin-left: 280px;
+}
+.card2 .fa-img{
+	margin-top: 20px;
+	margin-left: 22px;
+}
+.card2 .p-4{
+	color: rgb(58, 50, 49);
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Cochin;
+	margin-left: 200px;
+    margin-top:-100px;
+}
+.card2 .amount{
+	font-size: 28px;
+	margin-left: 170px;
+	font-weight: bold;
+    margin-top: -100px;
+    margin-left: 200px;
+}
+
+.card3{
+	background-color: rgb(241, 233, 233);
+	height: 400px;
+	width: 600px;
+    margin-left: 280px;
+	position: absolute;
+    margin-top: 480px;
+}
+.card3 .fa-img{
+	margin-top: 20px;
+	margin-left: 22px;
+}
+.card3 .p-4{
+	color: rgb(58, 50, 49);
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Cochin;
+	margin-left: 200px;
+    margin-top:-70px;
+}
+.card3 .amount{
+	font-size: 28px;
+	margin-left: 170px;
+	font-weight: bold;
+    margin-top: -100px;
+    margin-left: 200px;
+}
+
+
+.active{
+	color:red;
+}
+.cb{
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: inherit;
+	margin-left: 30px;
+	line-height: 35px;
+	color: red;
+	list-style: none;
+	letter-spacing: 2px;
+	
+	font-weight: bold;
+	text-decoration:overline;
+	text-transform: uppercase;
+}
+.head1{
+	font-size: 28px;
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	line-height: 35px;
+	color: black;
+	margin-left: 90px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cb1{
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: inherit;
+	margin-left: 30px;
+	line-height: 35px;
+	text-decoration: overline;
+	color: red;
+	list-style: none;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+.container-2{
+    background-color: black;
+    margin-top : 750px;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+}
+.h2-c{
+    margin-top: 2290px;
+    position: absolute;
+    margin-left: 870px;
+    font-size: 68px;
+    
+}
+.h2-c-1{
+    margin-top: 2350px;
+    position: absolute;
+    margin-left: 720px;
+    font-size: 68px;
+}
+.container-2 .rows{
+    margin-top: 60px;
+    margin-left: 150px;
+    position: absolute;
+    width: 400px;
+    
+}
+
+.columns{
+    float: left;
+    margin-top: 130px;
+    position: absolute;
+}
+.ft-col1{
+    margin-top: 200px;
+    color:white;
+    font-size: 22px;
+    margin-top: 2px;
+    list-style: none;
+    text-align: left;
+    text-decoration: wavy;
+    line-height: 34px;
+}
+.ft-col1-h{
+    color:white;
+    font-size: 29px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    list-style: none;
+    text-align: center;
+    text-decoration: wavy;
+}
+.container-2 .rows-2{
+    margin-top: 60px;
+    margin-left: 680px;
+    position: absolute;
+    width: 400px;
+}
+.columns-2{
+    float: center;
+    margin-top: 130px;
+    position: absolute;
+}
+.container-2 .rows-3{
+    margin-top: 60px;
+    margin-left: 1100px;
+    position: absolute;
+    width: 400px;
+}
+.columns-3{
+    float: center;
+    margin-top: 130px;
+    position: absolute;
+}
+.container-2 .rows-4{
+    margin-top: 60px;
+    margin-left: 1500px;
+    position: absolute;
+    width: 400px;
+}
+.columns-4{
+    float: center;
+    margin-top: 130px;
+    position: absolute;
+}
+.cp{
+    margin-top: 440px;
+    color: white;
+    margin-left: 700px;
+}
+.cp-1{
+    margin-top: 90px;
+    color: rgb(216, 163, 17);
+    margin-left: 600px;
+    font-size: 24px;
+    position: absolute;
+}
+.ch-1{
+    margin-top: 40px;
+    color: white;
+    margin-left: 900px;
+    text-align: center;
+    font-size: 28px;
+    position: absolute;
+}
+.cart-btn{
+	height: 70px;
+	width: 250px;
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 20px;
+	background-color: rgb(27, 26, 26);
+	color: white;
+	border-radius: 10px;
+}
+.cart-btn:hover{
+	background-color: green;
+}

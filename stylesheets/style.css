@@ -1,0 +1,274 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+#header{
+	height:92px; 
+	border-bottom:1px solid #eee;
+    margin-left: 20px;
+    position: relative;
+    
+}
+#header ul{padding:33px 0 0 45px;}
+#header li{
+	list-style:none;
+	float:left;
+	margin-right:50px;	
+    margin-top: 30px;
+}
+#header li a{
+	font-weight:700;
+	color:#333;
+    font-family: 'Franklin Gothic Medium';
+	font-size:22px;	
+	text-decoration:none;
+	text-transform:uppercase;
+	letter-spacing:1px;
+    font-weight: bold;
+    position: st;
+}
+#headerli a:hover{
+	color:#000;
+	cursor:pointer;
+    
+}
+
+#header :hover{ 
+    color: red;
+}
+
+.logo{
+    float: right;
+    margin-right: 40px;
+    margin-top: -30px;
+    font-size: 37px;
+    font-weight: bold;
+    font-family:Cambria;
+    position: relative;
+
+}
+span{
+    font-size: 50px;
+    color: brown;
+}
+
+.container{
+    width: 100%;
+    background-color: white;
+    height: 4000px;
+    position:absolute;
+}
+
+.img-1{
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 2170px;
+    margin-left: 20px;
+    border: #000;
+    cursor: pointer;
+}
+.img1:hover{
+    cursor: pointer;
+}
+
+.img-2{
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 2570px;
+    margin-left: 650px;
+    border: #000;
+    cursor: pointer;
+}
+.img1:hover{
+    cursor:pointer;
+    opacity: 89%;
+}
+
+.img-3{
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 2170px;
+    margin-left: 1280px;
+    border: #000;
+    cursor: pointer;
+}
+.img-3:hover{
+    cursor:pointer;
+    opacity: 89%;
+}
+
+
+.img-4{
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 3000px;
+    margin-left: 20px;
+    border: #000;
+    cursor: pointer;
+}
+.img-4:hover{
+    cursor:pointer;
+    opacity: 89%;
+}
+
+.img-5{
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 3400px;
+    margin-left: 650px;
+    border: #000;
+    cursor: pointer;
+}
+.img-5:hover{
+    cursor:pointer;
+    opacity: 89%;
+}
+
+.img-6{
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 3000px;
+    margin-left: 1280px;
+    border: #000;
+    cursor: pointer;
+}
+.img-6:hover{
+    cursor:pointer;
+    opacity: 89%;
+}
+
+.img-7{
+    margin-top: 0px;
+    position: absolute;
+}
+.img-7:hover{
+    cursor:pointer;
+    
+}
+
+.img-8{
+    margin-top: 1075px;
+    position: absolute;
+}
+
+.container-2{
+    background-color: black;
+    margin-top : 4685px;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+}
+.img-9{
+    margin-top: 3800px;
+    margin-left: -90px;
+    position: absolute;
+}
+
+.img-10{
+    margin-top: 3820px;
+    margin-left: 1300px;
+    
+}
+.active{
+	color:red;
+}
+.h2-c{
+    margin-top: 2290px;
+    position: absolute;
+    margin-left: 870px;
+    font-size: 68px;
+    
+}
+.h2-c-1{
+    margin-top: 2350px;
+    position: absolute;
+    margin-left: 720px;
+    font-size: 68px;
+}
+.container-2 .rows{
+    margin-top: 60px;
+    margin-left: 150px;
+    position: absolute;
+    width: 400px;
+    
+}
+
+.columns{
+    float: left;
+    margin-top: 130px;
+    position: absolute;
+}
+.ft-col1{
+    margin-top: 200px;
+    color:white;
+    font-size: 22px;
+    margin-top: 2px;
+    list-style: none;
+    text-align: left;
+    text-decoration: wavy;
+    line-height: 34px;
+}
+.ft-col1-h{
+    color:white;
+    font-size: 29px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    list-style: none;
+    text-align: center;
+    text-decoration: wavy;
+}
+.container-2 .rows-2{
+    margin-top: 60px;
+    margin-left: 680px;
+    position: absolute;
+    width: 400px;
+}
+.columns-2{
+    float: center;
+    margin-top: 130px;
+    position: absolute;
+}
+.container-2 .rows-3{
+    margin-top: 60px;
+    margin-left: 1100px;
+    position: absolute;
+    width: 400px;
+}
+.columns-3{
+    float: center;
+    margin-top: 130px;
+    position: absolute;
+}
+.container-2 .rows-4{
+    margin-top: 60px;
+    margin-left: 1500px;
+    position: absolute;
+    width: 400px;
+}
+.columns-4{
+    float: center;
+    margin-top: 130px;
+    position: absolute;
+}
+.cp{
+    margin-top: 440px;
+    color: white;
+    margin-left: 700px;
+}
+.cp-1{
+    margin-top: 90px;
+    color: rgb(216, 163, 17);
+    margin-left: 600px;
+    font-size: 24px;
+    position: absolute;
+}
+.ch-1{
+    margin-top: 40px;
+    color: white;
+    margin-left: 900px;
+    text-align: center;
+    font-size: 28px;
+    position: absolute;
+}
